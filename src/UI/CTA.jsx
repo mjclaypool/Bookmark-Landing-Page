@@ -7,7 +7,7 @@ export default function CTA({ color, children }) {
 
   return (
     <button
-      className={`${colorVariants[color]} text-sm font-semibold rounded-md border-2 border-transparent py-2 px-6 hover:bg-transparent hover:border-2`}
+      className={`${colorVariants[color]} text-sm font-semibold rounded-md border-2 border-transparent shadow-md py-2 px-4 lg:px-6 hover:bg-transparent hover:border-2`}
       type="button"
     >
       {children}
