@@ -88,23 +88,23 @@ export default function FeaturesTabs() {
         </div>
         <hr />
       </div>
-      <div className="flex flex-col lg:flex-row w-[100vw] justify-center items-center gap-24 my-12">
-        <div className="relative flex flex-col w-[100vw] lg:w-[50vw] items-center lg:items-end">
+      <div className="flex flex-col lg:flex-row w-[100vw] justify-center items-center gap-24 mt-16">
+        <div className="relative flex flex-col w-[100vw] lg:w-[60vw] items-center lg:items-end">
           <img
             src={content[tab].img}
             alt="Feature illustration"
-            className="relative lg:max-w-[440px] max-h-[284px] object-contain px-12 lg:px-0 z-20"
+            className="relative max-h-[284px] lg:h-[360px] lg:max-h-max object-contain px-8 z-20"
           />
           <img
             src={bgBlob}
             alt="Blue geometric background shape."
-            className="absolute w-[60vw] lg:w-[45vw] h-full lg:h-[95%] left-0 -bottom-12 z-10 rotate-180"
+            className="absolute w-[60vw] lg:w-[40vw] h-full left-0 -bottom-10 lg:-bottom-20 z-10 rotate-180"
           />
         </div>
         <div className="flex flex-col items-center lg:items-start text-center max-w-[476px] lg:max-w-full lg:text-start lg:w-[50vw] lg:pr-12">
           <h3 className="text-dark-blue text-2xl lg:text-3xl font-bold">{content[tab].title}</h3>
           <p className="text-grey-blue text-base lg:max-w-[410px] my-4 lg:my-6 px-6 lg:px-0">{content[tab].text}</p>
-          <div>
+          <div className="hidden lg:block">
             <CTA color="blue">More Info</CTA>
           </div>
         </div>

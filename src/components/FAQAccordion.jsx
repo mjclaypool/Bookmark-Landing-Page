@@ -20,12 +20,12 @@ export default function FAQAccordion() {
 
   return (
     <div className="my-12">
-      <hr />
+      <hr className="hidden lg:block" />
       {questions.map(index => (
         <div key={index}>
-          <div className="cursor-pointer py-4" onClick={() => handleClick(index)}>
-          <div className="flex justify-between items-center hover:text-soft-red">
-            <h3 className="text-lg">{index}</h3>
+          <div className="cursor-pointer py-5" onClick={() => handleClick(index)}>
+          <div className="flex justify-between items-center text-start hover:text-soft-red">
+            <h3 className="text-md">{index}</h3>
             {question == index ?
               <svg xmlns="http://www.w3.org/2000/svg" width="18" height="12" className="stroke-soft-red rotate-180">
                 <path fill="none" stroke="current" strokeWidth="3" d="M1 1l8 8 8-8"/>

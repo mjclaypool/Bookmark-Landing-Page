@@ -15,7 +15,7 @@ export default function Modal({onDone}) {
   return createPortal(
     <>
       <dialog
-        className="fixed top-0 left-0 flex flex-col justify-between w-full h-full bg-dark-blue opacity-95 z-10 py-10 px-8"
+        className="fixed top-0 left-0 flex flex-col justify-between w-full h-full bg-dark-blue opacity-95 z-30 py-10 px-8"
         onClose={onDone}
         open
       >
