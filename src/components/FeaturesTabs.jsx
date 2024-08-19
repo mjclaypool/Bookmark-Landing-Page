@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { motion } from "framer-motion"
 import CTA from "../UI/CTA";
 
 import featImg1 from "../../images/illustration-features-tab-1.svg";
@@ -9,9 +10,9 @@ import bgBlob from "../../images/bg-blob.svg";
 export default function FeaturesTabs() {
   const [tab, setTab] = useState("bookmarking");
   const [tabStyle, setTabStyle] = useState({
-    bookmarking: "text-dark-blue border-b-soft-red",
-    searching: "text-grey-blue border-b-transparent",
-    sharing: "text-grey-blue border-b-transparent",
+    bookmarking: "text-dark-blue",
+    searching: "text-grey-blue",
+    sharing: "text-grey-blue",
   });
   const content = {
     bookmarking: {
@@ -36,23 +37,23 @@ export default function FeaturesTabs() {
     if (id == "bookmarking"){
       setTabStyle(tabStyle => ({
         ...tabStyle,
-        bookmarking: "text-dark-blue border-b-soft-red",
-        searching: "text-grey-blue border-b-transparent",
-        sharing: "text-grey-blue border-b-transparent",
+        bookmarking: "text-dark-blue",
+        searching: "text-grey-blue",
+        sharing: "text-grey-blue",
       }))
     } else if (id == "searching"){
       setTabStyle(tabStyle => ({
         ...tabStyle,
-        bookmarking: "text-grey-blue border-b-transparent",
-        searching: "text-dark-blue border-b-soft-red",
-        sharing: "text-grey-blue border-b-transparent",
+        bookmarking: "text-grey-blue",
+        searching: "text-dark-blue",
+        sharing: "text-grey-blue",
       }))
     } else if (id == "sharing"){
       setTabStyle(tabStyle => ({
         ...tabStyle,
-        bookmarking: "text-grey-blue border-b-transparent",
-        searching: "text-grey-blue border-b-transparent",
-        sharing: "text-dark-blue border-b-soft-red",
+        bookmarking: "text-grey-blue",
+        searching: "text-grey-blue",
+        sharing: "text-dark-blue",
       }))
     }
   }
@@ -62,29 +63,50 @@ export default function FeaturesTabs() {
       <div className="w-[80vw] lg:w-[670px]">
         <hr className="lg:hidden"/>
         <div className="flex flex-col lg:flex-row items-center justify-between">
-          <button
-            type="button"
-            className={`${tabStyle.bookmarking} lg:w-1/3 px-8 py-4 cursor-pointer border-b-4 hover:text-soft-red`}
-            onClick={() => handleClick("bookmarking")}
-          >
-            Simple Bookmarking
-          </button>
+          <div className="flex flex-col">
+            <button
+              type="button"
+              className={`${tabStyle.bookmarking} px-8 py-4 cursor-pointer hover:text-soft-red`}
+              onClick={() => handleClick("bookmarking")}
+            >
+              Simple Bookmarking
+            </button>
+            {tab == "bookmarking" ?
+              <motion.div layoutId="tab-indicator" className="w-full border-b-4 border-b-soft-red" />
+            :
+              <div className="border-b-4 border-transparent"/>
+            }
+          </div>
           <hr className="w-[80vw] lg:hidden"/>
-          <button
-            type="button"
-            className={`${tabStyle.searching} lg:w-1/3 px-8 py-4 cursor-pointer border-b-4 hover:text-soft-red`}
-            onClick={() => handleClick("searching")}
-          >
-            Speedy Searching
-          </button>
+          <div className="flex flex-col">
+            <button
+              type="button"
+              className={`${tabStyle.searching} px-8 py-4 cursor-pointer hover:text-soft-red`}
+              onClick={() => handleClick("searching")}
+            >
+              Speedy Searching
+            </button>
+            {tab == "searching" ?
+              <motion.div layoutId="tab-indicator" className="w-full border-b-4 border-b-soft-red" />
+            :
+              <div className="border-b-4 border-transparent"/>
+            }
+          </div>
           <hr className="w-[80vw] lg:hidden"/>
-          <button
-            type="button"
-            className={`${tabStyle.sharing} lg:w-1/3 px-8 py-4 cursor-pointer border-b-4 hover:text-soft-red`}
-            onClick={() => handleClick("sharing")}
-          >
-            Easy Sharing
-          </button>
+          <div className="flex flex-col">
+            <button
+              type="button"
+              className={`${tabStyle.sharing} px-8 py-4 cursor-pointer hover:text-soft-red`}
+              onClick={() => handleClick("sharing")}
+            >
+              Easy Sharing
+            </button>
+            {tab == "sharing" ?
+              <motion.div layoutId="tab-indicator" className="w-full border-b-4 border-b-soft-red" />
+            :
+              <div className="border-b-4 border-transparent"/>
+            }
+          </div>
         </div>
         <hr />
       </div>

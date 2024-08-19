@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { motion } from "framer-motion"
 
 export default function FAQAccordion() {
   const [question, setQuestion] = useState(0);
@@ -27,13 +28,13 @@ export default function FAQAccordion() {
           <div className="flex justify-between items-center text-start hover:text-soft-red">
             <h3 className="text-md">{index}</h3>
             {question == index ?
-              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="12" className="stroke-soft-red rotate-180">
+              <motion.svg xmlns="http://www.w3.org/2000/svg" width="18" height="12" className="stroke-soft-red" animate={{rotate: 180}}>
                 <path fill="none" stroke="current" strokeWidth="3" d="M1 1l8 8 8-8"/>
-              </svg>
+              </motion.svg>
             :
-              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="12" className="stroke-soft-blue">
+              <motion.svg xmlns="http://www.w3.org/2000/svg" width="18" height="12" className="stroke-soft-blue" animate={{rotate: 0}}>
                 <path fill="none" stroke="current" strokeWidth="3" d="M1 1l8 8 8-8"/>
-              </svg>
+              </motion.svg>
             }
           </div>
           {question == index && <p className="text-grey-blue text-base pt-6 pb-4 text-left">{lorem}</p>}
