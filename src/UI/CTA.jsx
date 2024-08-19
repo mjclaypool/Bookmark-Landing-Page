@@ -1,4 +1,4 @@
-export default function CTA({ color, children }) {
+export default function CTA({ color, type, children }) {
   const colorVariants = {
     red: 'text-white bg-soft-red hover:text-soft-red hover:border-soft-red',
     blue: 'text-white bg-soft-blue hover:text-soft-blue hover:border-soft-blue',
@@ -6,11 +6,22 @@ export default function CTA({ color, children }) {
   }
 
   return (
-    <button
-      className={`${colorVariants[color]} text-sm font-semibold rounded-md border-2 border-transparent shadow-md py-2 px-4 lg:px-6 hover:bg-transparent hover:border-2`}
-      type="button"
-    >
-      {children}
-    </button>
+    <>
+      {type == "submit" ?
+        <button
+          className={`${colorVariants[color]} text-sm font-semibold rounded-md border-2 border-transparent shadow-md py-2 px-4 lg:px-6 hover:bg-transparent hover:border-2`}
+          type="submit"
+        >
+          {children}
+        </button>
+      :
+        <button
+          className={`${colorVariants[color]} text-sm font-semibold rounded-md border-2 border-transparent shadow-md py-2 px-4 lg:px-6 hover:bg-transparent hover:border-2`}
+          type="button"
+        >
+          {children}
+        </button>
+      }
+    </>
   )
 }
