@@ -1,0 +1,9 @@
+<!-- <svg height="200" width="400" xmlns="http://www.w3.org/2000/svg">
+  <circle r="100" cx="100" cy="100" fill="hsl(231, 69%, 60%)" />
+  <rect width="400" height="200" x="50" y="0" rx="50" ry="50" fill="hsl(231, 69%, 60%)" />
+</svg> -->
+
+<svg width="500" height="300" xmlns="http://www.w3.org/2000/svg">
+  <circle r="150" cx="150" cy="150" fill="hsl(231, 69%, 60%)" />
+  <rect width="500" height="300" x="100" y="0" rx="50" ry="50" fill="hsl(231, 69%, 60%)" />
+</svg>
