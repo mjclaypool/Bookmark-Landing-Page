@@ -49,7 +49,29 @@ Users should be able to:
 
 ### What I learned
 
-After completing the challenge objectives, I used Framer Motion to animate sliding an active-tab indicator in the Features section, rotating accordion carets with expand/close interactions in the FAQ section, and scaling buttons throughout the page with hover and click effects. In creating the sliding active-tab indicator, I was excited to learn how to use layout animations to automatically animate position and sizing changes.
+I learned that Tailwind CSS cannot concatenate class names together. So when I created a reusable Button component and wanted to pass it a color property, I mapped the props to static class names instead of trying to use them dynamically build class names.
+
+```js
+export default function CTA({ color, type, children }) {
+const colorVariants = {
+  red: 'text-white bg-soft-red hover:text-soft-red hover:border-soft-red',
+  blue: 'text-white bg-soft-blue hover:text-soft-blue hover:border-soft-blue',
+  grey: 'text-stone-700 bg-stone-100 hover:text-stone-700 hover:border-stone-700',
+}
+
+return (
+  <motion.button
+    whileHover={{ scale: 1.1 }}
+    whileTap={{ scale: 0.9 }}
+    className={`${colorVariants[color]} text-sm font-medium rounded-md border-2 border-transparent shadow-md py-2 px-4 lg:px-6 hover:bg-transparent hover:border-2`}
+    type="button"
+  >
+    {children}
+  </motion.button>
+)}
+```
+
+Also, after completing the challenge objectives, I used Framer Motion to animate sliding an active-tab indicator in the Features section, rotating accordion carets with expand/close interactions in the FAQ section, and scaling buttons throughout the page with hover and click effects. In creating the sliding active-tab indicator, I was excited to learn how to use layout animations to automatically animate position and sizing changes.
 
 ```js
 {tab == "bookmarking" ?
