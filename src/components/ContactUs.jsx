@@ -33,7 +33,7 @@ export default function ContactUs() {
               name="email"
               ref={email}
               placeholder="Enter your email address"
-              className="w-full placeholder:text-stone-300 text-sm rounded-md px-4 py-2"
+              className="w-full placeholder:text-stone-300 text-sm rounded-md px-4 py-3"
             />
             {isInvalid &&
               <>

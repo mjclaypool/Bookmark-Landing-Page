@@ -59,7 +59,7 @@ export default function FeaturesTabs() {
   }
 
   return (
-    <div className="flex flex-col items-center font-rubik my-6">
+    <div className="flex flex-col items-center font-rubik my-7">
       <div className="w-[80vw] lg:w-[670px]">
         <hr className="lg:hidden"/>
         <div className="flex flex-col lg:flex-row items-center justify-between">

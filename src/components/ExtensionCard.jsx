@@ -14,7 +14,7 @@ export default function ExtensionCard({ logo, name, version }) {
           <p className="text-grey-blue text-base my-1">Minimum version {version}</p>
         </div>
         <div>
-          <img src={dots} />
+          <img src={dots} alt="Dotted horizontal line" />
           <div className="flex justify-center my-6">
             <CTA color="blue" >Add & Install Extension</CTA>
           </div>

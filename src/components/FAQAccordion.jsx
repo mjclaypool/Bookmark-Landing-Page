@@ -28,11 +28,11 @@ export default function FAQAccordion() {
           <div className="flex justify-between items-center text-start hover:text-soft-red">
             <h3 className="text-md">{index}</h3>
             {question == index ?
-              <motion.svg xmlns="http://www.w3.org/2000/svg" width="18" height="12" className="stroke-soft-red" animate={{rotate: 180}}>
+              <motion.svg alt="Red caret icon" xmlns="http://www.w3.org/2000/svg" width="18" height="12" className="stroke-soft-red" animate={{rotate: 180}}>
                 <path fill="none" stroke="current" strokeWidth="3" d="M1 1l8 8 8-8"/>
               </motion.svg>
             :
-              <motion.svg xmlns="http://www.w3.org/2000/svg" width="18" height="12" className="stroke-soft-blue" animate={{rotate: 0}}>
+              <motion.svg alt="Blue caret icon" xmlns="http://www.w3.org/2000/svg" width="18" height="12" className="stroke-soft-blue" animate={{rotate: 0}}>
                 <path fill="none" stroke="current" strokeWidth="3" d="M1 1l8 8 8-8"/>
               </motion.svg>
             }
